@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using SpeechLib;
 
 public class TaxCalculator : MonoBehaviour
 {
+
+    public InputField grossSalaryInputField;
+
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
 
@@ -37,8 +41,12 @@ public class TaxCalculator : MonoBehaviour
     {
         // Get from user. E.g. input box
         // Validate the input (ensure it is a positive, valid number)
-        double grossYearlySalary = 1000;
-        return grossYearlySalary;
+
+
+        grossSalaryInputField = Input(); 
+       
+
+        return grossSalaryInputField ;
     }
 
     private string GetSalaryPayPeriod()
