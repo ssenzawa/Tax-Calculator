@@ -43,10 +43,10 @@ public class TaxCalculator : MonoBehaviour
         // Validate the input (ensure it is a positive, valid number)
 
 
-        grossSalaryInputField = Input(); 
+        double grossSalary = double.Parse(grossSalaryInputField.text); 
        
 
-        return grossSalaryInputField ;
+        return grossSalary;
     }
 
     private string GetSalaryPayPeriod()
