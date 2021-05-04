@@ -2,11 +2,13 @@
 using UnityEngine.UI;
 using SpeechLib;
 using System;
+using System.Collections;
 
 public class TaxCalculator : MonoBehaviour
 {
 
     public InputField grossSalaryInputField;
+    public Dropdown timeframe;
 
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
@@ -20,8 +22,11 @@ public class TaxCalculator : MonoBehaviour
     }
 
     // Run this function on the click event of your 'Calculate' button
+
     public void Calculate()
     {
+        
+            
         // Initialisation of variables
         double medicareLevyPaid = 0;
         double incomeTaxPaid = 0;
@@ -45,8 +50,7 @@ public class TaxCalculator : MonoBehaviour
 
 
         double grossSalary = double.Parse(grossSalaryInputField.text);
-       Console.Write("");
-        Console.Read();
+        print(grossSalary);
         return grossSalary;
     }
 
