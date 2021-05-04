@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using SpeechLib;
+using System;
 
 public class TaxCalculator : MonoBehaviour
 {
@@ -43,9 +44,9 @@ public class TaxCalculator : MonoBehaviour
         // Validate the input (ensure it is a positive, valid number)
 
 
-        double grossSalary = double.Parse(grossSalaryInputField.text); 
-       
-
+        double grossSalary = double.Parse(grossSalaryInputField.text);
+       Console.Write("");
+        Console.Read();
         return grossSalary;
     }
 
