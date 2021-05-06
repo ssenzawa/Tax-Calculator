@@ -8,7 +8,7 @@ public class TaxCalculator : MonoBehaviour
 {
 
     public InputField grossSalaryInputField;
-    public Dropdown timeframe;
+    public DropDown timeframe;
 
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
