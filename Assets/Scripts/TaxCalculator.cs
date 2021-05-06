@@ -57,7 +57,7 @@ public class TaxCalculator : MonoBehaviour
     private string GetSalaryPayPeriod()
     {
         // Get from user. E.g. combobox or radio buttons
-        Dropdown timeframe;
+       
         
         
         string salaryPayPeriod = "weekly";
