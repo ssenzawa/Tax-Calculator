@@ -7,14 +7,17 @@ using System.Collections;
 public class TaxCalculator : MonoBehaviour
 {
 
-    public InputField grossSalaryInputField;
-    public Dropdown timeframe;
+   
+
 
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
 
     // Variables
     bool textToSpeechEnabled = true;
+    public InputField grossSalaryInputField;
+    public Dropdown timeframe;
+    public InputField grossYearlySalaryImputField;
 
     private void Start()
     {
@@ -57,31 +60,22 @@ public class TaxCalculator : MonoBehaviour
     private string GetSalaryPayPeriod()
     {
         // Get from user. E.g. combobox or radio buttons
-       
         
         int salaryPayPeriod = timeframe.value;
 
         if (salaryPayPeriod == 0) return"weekly";
-
-
-            else if (salaryPayPeriod == 1) return"fortnightly" ;
-
-            else if (salaryPayPeriod == 2) return"monthly" ;
-
-            else return "yearly";
-
-
-
-      
-
-        
+        else if (salaryPayPeriod == 1) return"fortnightly" ;
+        else if (salaryPayPeriod == 2) return"monthly" ;
+        else return "yearly";
     }
 
     private double CalculateGrossYearlySalary(double grossSalaryInput, string salaryPayPeriod)
     {
-        // This is a stub, replace with the real calculation and return the result
-        double grossYearlySalary = 50000;
-        return grossYearlySalary;
+
+        if (salaryPayPeriod == "weekly") return grossSalaryInput * 52;
+        else if (salaryPayPeriod == "fortnightly") return grossSalaryInput * 26;
+        else if (salaryPayPeriod == "monthly") return grossSalaryInput * 12;
+        else return grossSalaryInput;
     }
 
     private double CalculateNetIncome(double grossYearlySalary, ref double medicareLevyPaid, ref double incomeTaxPaid)
@@ -89,7 +83,7 @@ public class TaxCalculator : MonoBehaviour
         // This is a stub, replace with the real calculation and return the result
         medicareLevyPaid = CalculateMedicareLevy(grossYearlySalary);
         incomeTaxPaid = CalculateIncomeTax(grossYearlySalary);
-        double netIncome = 33000;        
+        double netIncome = grossYearlySalary - incomeTaxPaid - medicareLevyPaid ;        
         return netIncome;
     }
 
