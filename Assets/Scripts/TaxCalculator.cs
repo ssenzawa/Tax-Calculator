@@ -8,7 +8,7 @@ public class TaxCalculator : MonoBehaviour
 {
 
     public InputField grossSalaryInputField;
-    public DropDown timeframe;
+    public Dropdown timeframe;
 
     // Constant rate for the Medicare Levy
     const double MEDICARE_LEVY = 0.02;
@@ -59,25 +59,22 @@ public class TaxCalculator : MonoBehaviour
         // Get from user. E.g. combobox or radio buttons
        
         
-        
-        string salaryPayPeriod = Dropdown ;
+        int salaryPayPeriod = timeframe.value;
 
-        {
-
-            if (salaryPayPeriod == 1("weekly")) ;
+        if (salaryPayPeriod == 0) return"weekly";
 
 
-            else if (salaryPayPeriod == 2("fortnightly")) ;
+            else if (salaryPayPeriod == 1) return"fortnightly" ;
 
-            else if (salaryPayPeriod == 3("monthly")) ;
+            else if (salaryPayPeriod == 2) return"monthly" ;
 
-            else if (salaryPayPeriod == 4("yearly")) ;
+            else return "yearly";
 
-        }
+
 
       
 
-        return salaryPayPeriod;
+        
     }
 
     private double CalculateGrossYearlySalary(double grossSalaryInput, string salaryPayPeriod)
