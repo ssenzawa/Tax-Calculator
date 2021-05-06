@@ -60,18 +60,18 @@ public class TaxCalculator : MonoBehaviour
        
         
         
-        string salaryPayPeriod = "weekly";
+        string salaryPayPeriod = Dropdown ;
 
         {
 
             if (salaryPayPeriod == 1("weekly")) ;
 
 
-            else if (salaryPayPeriod == 2("fortnightly"));
+            else if (salaryPayPeriod == 2("fortnightly")) ;
 
+            else if (salaryPayPeriod == 3("monthly")) ;
 
-
-
+            else if (salaryPayPeriod == 4("yearly")) ;
 
         }
 
