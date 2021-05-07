@@ -90,16 +90,32 @@ public class TaxCalculator : MonoBehaviour
     private double CalculateMedicareLevy(double grossYearlySalary)
     {
         // This is a stub, replace with the real calculation and return the result
-        double medicareLevyPaid = 2000;        
+        double medicareLevyPaid = grossYearlySalary * MEDICARE_LEVY; 
         return medicareLevyPaid;
     }
 
     private double CalculateIncomeTax(double grossYearlySalary)
     {
-        // This is a stub, replace with the real calculation and return the result
-        double incomeTaxPaid = 15000;
-        return incomeTaxPaid;
-    }
+        if (grossYearlySalary < 18201)
+        {
+            return 0;
+        }
+        else if (grossYearlySalary < 37000)
+        {
+            return;
+        }
+        else if (grossYearlySalary < 87000)
+        {
+            return;
+        }
+        else if (grossYearlySalary < 180000)
+
+            return;
+
+        else if (grossYearlySalary < 180001
+            return; 
+    } 
+
 
     private void OutputResults(double medicareLevyPaid, double incomeTaxPaid, double netIncome)
     {
