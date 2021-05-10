@@ -102,19 +102,19 @@ public class TaxCalculator : MonoBehaviour
         }
         else if (grossYearlySalary < 37000)
         {
-            return;
+            return (grossYearlySalary-18200) *0.19;
         }
         else if (grossYearlySalary < 87000)
         {
-            return;
+            return  (grossYearlySalary-37000) *3572;
         }
         else if (grossYearlySalary < 180000)
 
-            return;
+            return(grossYearlySalary-87000)*19822;
 
         else if (grossYearlySalary < 180001)
-            return; 
-    } 
+            return(grossYearlySalary-180000)*54232; 
+    }
 
 
     private void OutputResults(double medicareLevyPaid, double incomeTaxPaid, double netIncome)
