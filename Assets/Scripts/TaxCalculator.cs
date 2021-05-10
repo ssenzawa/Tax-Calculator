@@ -112,7 +112,7 @@ public class TaxCalculator : MonoBehaviour
 
             return;
 
-        else if (grossYearlySalary < 180001
+        else if (grossYearlySalary < 180001)
             return; 
     } 
 
