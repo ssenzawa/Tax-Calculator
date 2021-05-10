@@ -102,18 +102,22 @@ public class TaxCalculator : MonoBehaviour
         }
         else if (grossYearlySalary < 37000)
         {
-            return (grossYearlySalary-18200) *0.19;
+            return (grossYearlySalary - 18200) * 0.19;
         }
         else if (grossYearlySalary < 87000)
         {
-            return  (grossYearlySalary-37000) *3572;
+            return (grossYearlySalary - 37000) *0.325 + 3572;
         }
         else if (grossYearlySalary < 180000)
+        {
+            return (grossYearlySalary - 87000)*0.37 + 19822;
+        }
+        else
+        {
+            return (grossYearlySalary - 180000)*0.45 + 54232;
+        }
 
-            return(grossYearlySalary-87000)*19822;
-
-        else if (grossYearlySalary < 180001)
-            return(grossYearlySalary-180000)*54232; 
+            
     }
 
 
